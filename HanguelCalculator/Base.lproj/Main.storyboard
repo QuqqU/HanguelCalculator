@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradleyHand-Bold.ttf">
+            <string>BradleyHandITCTT-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HanguelCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일더하기이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-hw-2IP">
+                                <rect key="frame" x="107" y="320" width="161" height="47"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7U-6t-jCB">
+                                <rect key="frame" x="16" y="617" width="295" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hKo-t3-ThZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vng-y8-Gnh">
+                                <rect key="frame" x="324" y="617" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vng-y8-Gnh" secondAttribute="height" multiplier="7:6" id="XT6-LR-Wd0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="정답">
+                                    <color key="titleColor" red="0.3908034581" green="0.3908034581" blue="0.3908034581" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="summitAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhr-mD-NSc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답수 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-3s-c1R">
+                                <rect key="frame" x="239" y="30" width="120" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="f2i-HR-w9t"/>
+                                    <constraint firstAttribute="width" secondItem="wu3-3s-c1R" secondAttribute="height" multiplier="5:2" id="tOG-mn-zrc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vng-y8-Gnh" firstAttribute="top" secondItem="C7U-6t-jCB" secondAttribute="top" id="3u9-5V-OOG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C7U-6t-jCB" secondAttribute="bottom" constant="20" id="PHy-hr-6D6"/>
+                            <constraint firstItem="vng-y8-Gnh" firstAttribute="leading" secondItem="C7U-6t-jCB" secondAttribute="trailing" constant="13" id="VCX-wy-cWk"/>
+                            <constraint firstItem="RbM-hw-2IP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W9N-hC-0X1"/>
+                            <constraint firstItem="C7U-6t-jCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="e5x-nH-328"/>
+                            <constraint firstItem="RbM-hw-2IP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gR0-My-mwJ"/>
+                            <constraint firstItem="wu3-3s-c1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nKP-bw-EJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vng-y8-Gnh" secondAttribute="trailing" constant="16" id="rRY-sf-svu"/>
+                            <constraint firstItem="vng-y8-Gnh" firstAttribute="bottom" secondItem="C7U-6t-jCB" secondAttribute="bottom" id="tZq-nP-eIL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wu3-3s-c1R" secondAttribute="trailing" constant="16" id="xOV-71-eBH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer" destination="C7U-6t-jCB" id="6OE-cc-Hag"/>
+                        <outlet property="numberOfCorrect" destination="wu3-3s-c1R" id="NqH-lH-4be"/>
+                        <outlet property="problem" destination="RbM-hw-2IP" id="vTQ-a0-9vT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

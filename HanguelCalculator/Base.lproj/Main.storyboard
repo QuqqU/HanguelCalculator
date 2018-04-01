@@ -62,15 +62,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pky-sb-OBi">
+                                <rect key="frame" x="156" y="117" width="62" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="B1q-Pb-0xx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Pky-sb-OBi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1tw-vm-UkB"/>
                             <constraint firstItem="vng-y8-Gnh" firstAttribute="top" secondItem="C7U-6t-jCB" secondAttribute="top" id="3u9-5V-OOG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C7U-6t-jCB" secondAttribute="bottom" constant="20" id="PHy-hr-6D6"/>
                             <constraint firstItem="vng-y8-Gnh" firstAttribute="leading" secondItem="C7U-6t-jCB" secondAttribute="trailing" constant="13" id="VCX-wy-cWk"/>
                             <constraint firstItem="RbM-hw-2IP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W9N-hC-0X1"/>
                             <constraint firstItem="C7U-6t-jCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="e5x-nH-328"/>
                             <constraint firstItem="RbM-hw-2IP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gR0-My-mwJ"/>
+                            <constraint firstItem="Pky-sb-OBi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="mCw-Y0-ZBK"/>
                             <constraint firstItem="wu3-3s-c1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nKP-bw-EJY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vng-y8-Gnh" secondAttribute="trailing" constant="16" id="rRY-sf-svu"/>
                             <constraint firstItem="vng-y8-Gnh" firstAttribute="bottom" secondItem="C7U-6t-jCB" secondAttribute="bottom" id="tZq-nP-eIL"/>
@@ -82,6 +93,7 @@
                         <outlet property="answer" destination="C7U-6t-jCB" id="6OE-cc-Hag"/>
                         <outlet property="numberOfCorrect" destination="wu3-3s-c1R" id="NqH-lH-4be"/>
                         <outlet property="problem" destination="RbM-hw-2IP" id="vTQ-a0-9vT"/>
+                        <outlet property="remainedTime" destination="Pky-sb-OBi" id="ZDp-NV-RAL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

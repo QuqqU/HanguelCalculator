@@ -24,12 +24,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일더하기이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-hw-2IP">
-                                <rect key="frame" x="107" y="320" width="161" height="47"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7U-6t-jCB">
                                 <rect key="frame" x="16" y="617" width="295" height="30"/>
                                 <constraints>
@@ -52,10 +46,9 @@
                                     <action selector="summitAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhr-mD-NSc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답수 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-3s-c1R">
-                                <rect key="frame" x="239" y="30" width="120" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답수 : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-3s-c1R">
+                                <rect key="frame" x="291" y="30" width="68" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="f2i-HR-w9t"/>
                                     <constraint firstAttribute="width" secondItem="wu3-3s-c1R" secondAttribute="height" multiplier="5:2" id="tOG-mn-zrc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,11 +56,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pky-sb-OBi">
-                                <rect key="frame" x="156" y="117" width="62" height="21"/>
+                                <rect key="frame" x="106" y="117" width="162" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="B1q-Pb-0xx"/>
+                                    <constraint firstAttribute="width" constant="162" id="B1q-Pb-0xx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일더하기이" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbM-hw-2IP">
+                                <rect key="frame" x="40" y="274" width="294" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RbM-hw-2IP" secondAttribute="height" multiplier="294:139" id="cva-mN-GOb"/>
+                                    <constraint firstAttribute="width" constant="294" id="eap-Pv-xjN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,6 +97,7 @@
                         <outlet property="numberOfCorrect" destination="wu3-3s-c1R" id="NqH-lH-4be"/>
                         <outlet property="problem" destination="RbM-hw-2IP" id="vTQ-a0-9vT"/>
                         <outlet property="remainedTime" destination="Pky-sb-OBi" id="ZDp-NV-RAL"/>
+                        <outlet property="solvedProblem" destination="wu3-3s-c1R" id="vBc-lN-ANJ"/>
                         <outlet property="summitButton" destination="vng-y8-Gnh" id="Kku-G2-Dlu"/>
                     </connections>
                 </viewController>

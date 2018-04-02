@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     var problemAnswer: Int?
     var cnt: Int = 0
     var timer = Timer()
+    var solved = 0
     
+    @IBOutlet weak var solvedProblem: UILabel!
     @IBOutlet weak var remainedTime: UILabel!
     @IBOutlet weak var numberOfCorrect: UILabel!
     @IBOutlet weak var problem: UILabel!
@@ -43,17 +45,29 @@ class ViewController: UIViewController {
             summitButton.isEnabled = false
             return
         }
+        if cnt <= 5 {
+            remainedTime.textColor = UIColor.red
+        }
+        else {
+            remainedTime.textColor = UIColor.black
+        }
         remainedTime.text = "\(cnt)"
         cnt -= 1
     }
     
     func makeProblem() {
+        self.problem.transform = .identity
+        
+        
         var numA = Int(arc4random() % 100)
         var numB = Int(arc4random() % 100)
         let a = HanguelNumber.intToHanguel(Number: numA)
         let b = HanguelNumber.intToHanguel(Number: numB)
         let symbol = HanguelArithSigne.arithSigneToHanguel(Number: Int(arc4random() % 4))
-        if symbol == "빼기" && numA < numB { (numA, numB) = (numB, numA) }
+        if symbol == "빼기" && numA < numB {
+            (numA, numB) = (numB, numA)
+            (a, b) = (b, a)
+        }
         
         if let _a = a, let _b = b, let _symbol = symbol {
             problem.text = _a + _symbol + _b
@@ -65,6 +79,11 @@ class ViewController: UIViewController {
             default : ()
             }
         }
+        
+        UIView.animate(withDuration: TimeInterval(2),
+                       animations: {
+                        self.problem.transform = CGAffineTransform(scaleX: 2, y: 2)
+        })
     }
 
     func checkAnswer(Answer ans: String?) -> Bool {
@@ -75,9 +94,13 @@ class ViewController: UIViewController {
     @IBAction func summitAnswer(_ sender: Any) {
         if checkAnswer(Answer: answer.text!) {
             setTimer()
+            answer.textColor = UIColor.black
+            solved += 1
+            solvedProblem.text = "정답수 : \(solved)"
         }
         else {
             answer.shake()
+            answer.textColor = UIColor.red
         }
     }
 }

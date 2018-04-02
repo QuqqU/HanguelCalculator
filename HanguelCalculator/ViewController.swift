@@ -58,16 +58,12 @@ class ViewController: UIViewController {
     func makeProblem() {
         self.problem.transform = .identity
         
-        
         var numA = Int(arc4random() % 100)
         var numB = Int(arc4random() % 100)
+        let symbol = HanguelArithSigne.arithSigneToHanguel(Number: Int(arc4random() % 4))
+        if symbol == "빼기" && numA < numB { (numA, numB) = (numB, numA) }
         let a = HanguelNumber.intToHanguel(Number: numA)
         let b = HanguelNumber.intToHanguel(Number: numB)
-        let symbol = HanguelArithSigne.arithSigneToHanguel(Number: Int(arc4random() % 4))
-        if symbol == "빼기" && numA < numB {
-            (numA, numB) = (numB, numA)
-            (a, b) = (b, a)
-        }
         
         if let _a = a, let _b = b, let _symbol = symbol {
             problem.text = _a + _symbol + _b
@@ -95,6 +91,7 @@ class ViewController: UIViewController {
         if checkAnswer(Answer: answer.text!) {
             setTimer()
             answer.textColor = UIColor.black
+            answer.text = ""
             solved += 1
             solvedProblem.text = "정답수 : \(solved)"
         }

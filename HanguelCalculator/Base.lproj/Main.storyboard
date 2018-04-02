@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9YV-PQ-uHc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,8 +14,45 @@
         <array key="BradleyHand-Bold.ttf">
             <string>BradleyHandITCTT-Bold</string>
         </array>
+        <array key="GodoM.ttf">
+            <string>GodoM</string>
+        </array>
     </customFonts>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="XET-p5-Fgg">
+            <objects>
+                <viewController id="9YV-PQ-uHc" customClass="StartViewController" customModule="HanguelCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gGJ-al-sOd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-sB-nnt">
+                                <rect key="frame" x="88.5" y="306" width="197" height="75"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="55"/>
+                                <state key="normal" title="시작하기">
+                                    <color key="titleColor" red="0.3908034581" green="0.3908034581" blue="0.3908034581" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="9YV-PQ-uHc" eventType="touchUpInside" id="Bwm-7y-Mpl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3eB-sB-nnt" firstAttribute="centerX" secondItem="Jv8-iU-sT7" secondAttribute="centerX" id="2Bz-Hi-7fd"/>
+                            <constraint firstItem="3eB-sB-nnt" firstAttribute="centerY" secondItem="Jv8-iU-sT7" secondAttribute="centerY" id="4OU-2D-RD3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jv8-iU-sT7"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="go_game" id="5jo-81-8ui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vis-9o-RdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-677.60000000000002" y="133.5832083958021"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,20 +84,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답수 : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu3-3s-c1R">
-                                <rect key="frame" x="291" y="30" width="68" height="27"/>
+                                <rect key="frame" x="288" y="30" width="71" height="28.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wu3-3s-c1R" secondAttribute="height" multiplier="5:2" id="tOG-mn-zrc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pky-sb-OBi">
-                                <rect key="frame" x="106" y="117" width="162" height="60"/>
+                                <rect key="frame" x="106" y="117" width="162" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="B1q-Pb-0xx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -74,11 +111,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFt-Fn-DEB">
+                                <rect key="frame" x="157" y="477.5" width="61" height="32"/>
+                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                <state key="normal" title="다시하기">
+                                    <color key="titleColor" red="0.3908034581" green="0.3908034581" blue="0.3908034581" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XrY-dO-Ygy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Pky-sb-OBi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1tw-vm-UkB"/>
                             <constraint firstItem="vng-y8-Gnh" firstAttribute="top" secondItem="C7U-6t-jCB" secondAttribute="top" id="3u9-5V-OOG"/>
+                            <constraint firstItem="gFt-Fn-DEB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="150" id="9j0-Ah-LBY"/>
+                            <constraint firstItem="gFt-Fn-DEB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NWn-aF-uMS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C7U-6t-jCB" secondAttribute="bottom" constant="20" id="PHy-hr-6D6"/>
                             <constraint firstItem="vng-y8-Gnh" firstAttribute="leading" secondItem="C7U-6t-jCB" secondAttribute="trailing" constant="13" id="VCX-wy-cWk"/>
                             <constraint firstItem="RbM-hw-2IP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W9N-hC-0X1"/>
@@ -94,9 +143,9 @@
                     </view>
                     <connections>
                         <outlet property="answer" destination="C7U-6t-jCB" id="6OE-cc-Hag"/>
-                        <outlet property="numberOfCorrect" destination="wu3-3s-c1R" id="NqH-lH-4be"/>
                         <outlet property="problem" destination="RbM-hw-2IP" id="vTQ-a0-9vT"/>
                         <outlet property="remainedTime" destination="Pky-sb-OBi" id="ZDp-NV-RAL"/>
+                        <outlet property="restartButton" destination="gFt-Fn-DEB" id="iKy-bG-KHk"/>
                         <outlet property="solvedProblem" destination="wu3-3s-c1R" id="vBc-lN-ANJ"/>
                         <outlet property="summitButton" destination="vng-y8-Gnh" id="Kku-G2-Dlu"/>
                     </connections>

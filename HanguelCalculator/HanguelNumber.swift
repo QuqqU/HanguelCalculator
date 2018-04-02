@@ -37,7 +37,7 @@ class HanguelNumber {
         else {
             let tenPlace = sigleDigitNumToHanguel(number / 10)
             let onePlace = sigleDigitNumToHanguel(number % 10)
-            return tenPlace + "십" + onePlace
+            return (tenPlace == "일" ? "" : tenPlace) + "십" + onePlace
         }
     }
     

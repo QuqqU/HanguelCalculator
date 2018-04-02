@@ -17,46 +17,63 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var solvedProblem: UILabel!
     @IBOutlet weak var remainedTime: UILabel!
-    @IBOutlet weak var numberOfCorrect: UILabel!
     @IBOutlet weak var problem: UILabel!
     @IBOutlet weak var answer: UITextField!
     @IBOutlet weak var summitButton: UIButton!
+    @IBOutlet weak var restartButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.restartButton.isHidden = true
         self.setTimer()
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
-                                         target: self,
-                                         selector: #selector(setRemainTime),
-                                         userInfo: nil,
-                                         repeats: true)
+                                     target: self,
+                                     selector: #selector(setRemainTime),
+                                     userInfo: nil,
+                                     repeats: true)
     }
+    
+    func gameEnd() {
+        self.remainedTime.isHidden = true
+        self.problem.isHidden = true
+        self.answer.isHidden = true
+        self.summitButton.isHidden = true
+        self.restartButton.isHidden = false
+        
+        UIView.animate(withDuration: TimeInterval(2),
+                       animations: {
+                        self.solvedProblem.transform = CGAffineTransform(scaleX: 3, y: 3)
+                        self.solvedProblem.transform = CGAffineTransform(translationX: -(self.solvedProblem.frame.minX + self.solvedProblem.frame.maxX) / 2 + UIScreen.main.bounds.width / 2,
+                                                                         y: -(self.solvedProblem.frame.minY + self.solvedProblem.frame.maxY) / 2 + UIScreen.main.bounds.height / 2)
+        })
+    }
+    
     
     func setTimer() {
         makeProblem()
         remainedTime.text = "10"
+        remainedTime.textColor = UIColor.black
         cnt = 10
     }
     
     @objc func setRemainTime() {
         if cnt < 0 {
             timer.invalidate()
-            summitButton.isEnabled = false
+            gameEnd()
             return
         }
-        if cnt <= 5 {
-            remainedTime.textColor = UIColor.red
-        }
-        else {
-            remainedTime.textColor = UIColor.black
-        }
+        if cnt <= 5 { remainedTime.textColor = UIColor.red }
+
         remainedTime.text = "\(cnt)"
         cnt -= 1
     }
     
     func makeProblem() {
         self.problem.transform = .identity
+        self.problem.alpha = 1
         
         var numA = Int(arc4random() % 100)
         var numB = Int(arc4random() % 100)
@@ -76,9 +93,11 @@ class ViewController: UIViewController {
             }
         }
         
-        UIView.animate(withDuration: TimeInterval(2),
+        UIView.animate(withDuration: TimeInterval(10),
                        animations: {
-                        self.problem.transform = CGAffineTransform(scaleX: 2, y: 2)
+                        self.problem.transform = CGAffineTransform(scaleX: 1.8, y: 2)
+                        self.problem.alpha = 0.01
+                        
         })
     }
 
@@ -87,6 +106,24 @@ class ViewController: UIViewController {
         else { return false }
     }
 
+  
+    @IBAction func restart(_ sender: Any) {
+        self.remainedTime.isHidden = false
+        self.problem.isHidden = false
+        self.answer.isHidden = false
+        self.summitButton.isHidden = false
+        self.restartButton.isHidden = true
+        
+        setTimer()
+        self.solvedProblem.transform = .identity
+        solved = 0
+        solvedProblem.text = "정답수 : 0"
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                     target: self,
+                                     selector: #selector(setRemainTime),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
     @IBAction func summitAnswer(_ sender: Any) {
         if checkAnswer(Answer: answer.text!) {
             setTimer()

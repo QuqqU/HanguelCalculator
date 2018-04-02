@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.endEditing(true)
+        answer.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,6 +117,7 @@ class ViewController: UIViewController {
         self.restartButton.isHidden = true
         
         setTimer()
+        self.answer.textColor = .black
         self.solvedProblem.transform = .identity
         solved = 0
         solvedProblem.text = "정답수 : 0"
@@ -136,6 +139,17 @@ class ViewController: UIViewController {
             answer.shake()
             answer.textColor = UIColor.red
         }
+    }
+}
+
+extension ViewController : UITextFieldDelegate {
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return true
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        answer.resignFirstResponder()
+        return true;
     }
 }
 

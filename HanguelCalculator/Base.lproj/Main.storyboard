@@ -37,11 +37,27 @@
                                     <action selector="start:" destination="9YV-PQ-uHc" eventType="touchUpInside" id="Bwm-7y-Mpl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Made by KIUNG JUNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-94-8Nf">
+                                <rect key="frame" x="128.5" y="635" width="118" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Icon Designed by SICHEOL SUNG in K512, Sogang Univ." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-o7-cKm">
+                                <rect key="frame" x="54.5" y="650" width="266.5" height="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3eB-sB-nnt" firstAttribute="centerX" secondItem="Jv8-iU-sT7" secondAttribute="centerX" id="2Bz-Hi-7fd"/>
+                            <constraint firstItem="Jv8-iU-sT7" firstAttribute="bottom" secondItem="PlU-o7-cKm" secondAttribute="bottom" constant="6" id="4Nn-CD-R1E"/>
                             <constraint firstItem="3eB-sB-nnt" firstAttribute="centerY" secondItem="Jv8-iU-sT7" secondAttribute="centerY" id="4OU-2D-RD3"/>
+                            <constraint firstItem="PlU-o7-cKm" firstAttribute="top" secondItem="3ia-94-8Nf" secondAttribute="bottom" constant="4" id="9Yg-du-Zl8"/>
+                            <constraint firstItem="PlU-o7-cKm" firstAttribute="centerX" secondItem="Jv8-iU-sT7" secondAttribute="centerX" id="iMj-u7-qfa"/>
+                            <constraint firstItem="3ia-94-8Nf" firstAttribute="centerX" secondItem="Jv8-iU-sT7" secondAttribute="centerX" id="yNe-jG-kkZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jv8-iU-sT7"/>
                     </view>
@@ -152,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-156" y="134"/>
         </scene>
     </scenes>
 </document>

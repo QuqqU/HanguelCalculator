@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOfCorrect: UILabel!
     @IBOutlet weak var problem: UILabel!
     @IBOutlet weak var answer: UITextField!
+    @IBOutlet weak var summitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
     @objc func setRemainTime() {
         if cnt < 0 {
             timer.invalidate()
+            summitButton.isEnabled = false
             return
         }
         remainedTime.text = "\(cnt)"
@@ -55,7 +57,13 @@ class ViewController: UIViewController {
         
         if let _a = a, let _b = b, let _symbol = symbol {
             problem.text = _a + _symbol + _b
-            problemAnswer = numA + numB //
+            switch _symbol {
+            case "더하기" : problemAnswer = numA + numB
+            case "빼기" : problemAnswer = numA - numB
+            case "곱하기" : problemAnswer = numA * numB
+            case "나누기" : problemAnswer = numA / numB
+            default : ()
+            }
         }
     }
 
@@ -69,10 +77,8 @@ class ViewController: UIViewController {
             setTimer()
         }
         else {
-            //violate
+            answer.shake()
         }
     }
-    
-    
 }
 

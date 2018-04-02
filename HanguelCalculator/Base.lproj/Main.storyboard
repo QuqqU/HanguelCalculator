@@ -94,6 +94,7 @@
                         <outlet property="numberOfCorrect" destination="wu3-3s-c1R" id="NqH-lH-4be"/>
                         <outlet property="problem" destination="RbM-hw-2IP" id="vTQ-a0-9vT"/>
                         <outlet property="remainedTime" destination="Pky-sb-OBi" id="ZDp-NV-RAL"/>
+                        <outlet property="summitButton" destination="vng-y8-Gnh" id="Kku-G2-Dlu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

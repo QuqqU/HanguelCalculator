@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67196DDD2071FDD700245CD0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 67196DDB2071FDD700245CD0 /* LICENSE */; };
+		67196DDE2071FDD700245CD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 67196DDC2071FDD700245CD0 /* README.md */; };
 		67345D342071CFF200243A03 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67345D332071CFF200243A03 /* StartViewController.swift */; };
 		6755D75E2071ADE2003B187D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6755D75D2071ADE2003B187D /* Extension.swift */; };
 		6755D7612071B591003B187D /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6755D75F2071B591003B187D /* GodoM.ttf */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67196DDB2071FDD700245CD0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		67196DDC2071FDD700245CD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		67345D332071CFF200243A03 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		6755D75D2071ADE2003B187D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		6755D75F2071B591003B187D /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		6758554B20709D0800072CC5 = {
 			isa = PBXGroup;
 			children = (
+				67196DDB2071FDD700245CD0 /* LICENSE */,
+				67196DDC2071FDD700245CD0 /* README.md */,
 				6758555620709D0800072CC5 /* HanguelCalculator */,
 				6758555520709D0800072CC5 /* Products */,
 			);
@@ -149,8 +155,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67196DDD2071FDD700245CD0 /* LICENSE in Resources */,
 				6758556220709D0800072CC5 /* LaunchScreen.storyboard in Resources */,
 				6758555F20709D0800072CC5 /* Assets.xcassets in Resources */,
+				67196DDE2071FDD700245CD0 /* README.md in Resources */,
 				6755D7622071B591003B187D /* Binggrae.ttf in Resources */,
 				6758555D20709D0800072CC5 /* Main.storyboard in Resources */,
 				6755D7612071B591003B187D /* GodoM.ttf in Resources */,

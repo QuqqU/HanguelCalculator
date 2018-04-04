@@ -118,6 +118,7 @@ class ViewController: UIViewController {
         
         setTimer()
         self.answer.textColor = .black
+        self.answer.text = ""
         self.solvedProblem.transform = .identity
         solved = 0
         solvedProblem.text = "정답수 : 0"

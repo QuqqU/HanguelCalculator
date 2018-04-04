@@ -77,8 +77,8 @@ class ViewController: UIViewController {
         self.problem.transform = .identity
         self.problem.alpha = 1
         
-        var numA = Int(arc4random() % 100)
-        var numB = Int(arc4random() % 100)
+        var numA = Int(arc4random() % 99 + 1)
+        var numB = Int(arc4random() % 99 + 1)
         let symbol = HanguelArithSigne.arithSigneToHanguel(Number: Int(arc4random() % 4))
         if symbol == "빼기" && numA < numB { (numA, numB) = (numB, numA) }
         let a = HanguelNumber.intToHanguel(Number: numA)

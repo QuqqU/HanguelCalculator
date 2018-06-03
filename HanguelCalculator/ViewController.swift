@@ -18,24 +18,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var solvedProblem: UILabel!
     @IBOutlet weak var remainedTime: UILabel!
     @IBOutlet weak var problem: UILabel!
-    @IBOutlet weak var answer: UITextField!
+    @IBOutlet weak var answer: UILabel!
     @IBOutlet weak var summitButton: UIButton!
     @IBOutlet weak var restartButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var numberButtons: UIStackView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.endEditing(true)
-        answer.delegate = self
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.restartButton.isHidden = true
+        self.answer.text = ""
         self.setTimer()
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
-                                     target: self,
-                                     selector: #selector(setRemainTime),
-                                     userInfo: nil,
-                                     repeats: true)
     }
     
     func gameEnd() {
@@ -44,6 +43,8 @@ class ViewController: UIViewController {
         self.answer.isHidden = true
         self.summitButton.isHidden = true
         self.restartButton.isHidden = false
+        self.deleteButton.isHidden = true
+        self.numberButtons.isHidden = true
         
         UIView.animate(withDuration: TimeInterval(2),
                        animations: {
@@ -59,6 +60,12 @@ class ViewController: UIViewController {
         remainedTime.text = "10"
         remainedTime.textColor = UIColor.black
         cnt = 10
+        
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                     target: self,
+                                     selector: #selector(setRemainTime),
+                                     userInfo: nil,
+                                     repeats: true)
     }
     
     @objc func setRemainTime() {
@@ -108,13 +115,22 @@ class ViewController: UIViewController {
         else { return false }
     }
 
-  
+    @IBAction func tabNumber1(_ sender: UIButton) {
+        self.answer.text?.append((sender.titleLabel?.text)!)
+    }
+    
+    @IBAction func DeleteAnswerSheet(_ sender: Any) {
+        self.answer.text = ""
+    }
+    
     @IBAction func restart(_ sender: Any) {
         self.remainedTime.isHidden = false
         self.problem.isHidden = false
         self.answer.isHidden = false
         self.summitButton.isHidden = false
         self.restartButton.isHidden = true
+        self.deleteButton.isHidden = false
+        self.numberButtons.isHidden = false
         
         setTimer()
         self.answer.textColor = .black
@@ -122,11 +138,6 @@ class ViewController: UIViewController {
         self.solvedProblem.transform = .identity
         solved = 0
         solvedProblem.text = "정답수 : 0"
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
-                                     target: self,
-                                     selector: #selector(setRemainTime),
-                                     userInfo: nil,
-                                     repeats: true)
     }
     @IBAction func summitAnswer(_ sender: Any) {
         if checkAnswer(Answer: answer.text!) {
@@ -141,16 +152,6 @@ class ViewController: UIViewController {
             answer.textColor = UIColor.red
         }
     }
-}
-
-extension ViewController : UITextFieldDelegate {
-
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return true
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        answer.resignFirstResponder()
-        return true;
-    }
+    
 }
 

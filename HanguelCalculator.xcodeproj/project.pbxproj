@@ -20,6 +20,7 @@
 		6758556220709D0800072CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6758556020709D0800072CC5 /* LaunchScreen.storyboard */; };
 		6758556A2070A21C00072CC5 /* HanguelNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675855692070A21C00072CC5 /* HanguelNumber.swift */; };
 		6758556C2070A40E00072CC5 /* HanguelArithSigne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6758556B2070A40E00072CC5 /* HanguelArithSigne.swift */; };
+		67FE98D820C3E32D003B99A4 /* baseline_delete_sweep_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FE98D720C3E32D003B99A4 /* baseline_delete_sweep_black_18dp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		6758556320709D0800072CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		675855692070A21C00072CC5 /* HanguelNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanguelNumber.swift; sourceTree = "<group>"; };
 		6758556B2070A40E00072CC5 /* HanguelArithSigne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanguelArithSigne.swift; sourceTree = "<group>"; };
+		67FE98D720C3E32D003B99A4 /* baseline_delete_sweep_black_18dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseline_delete_sweep_black_18dp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		6758555620709D0800072CC5 /* HanguelCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				67FE98D620C3E318003B99A4 /* icon */,
 				6755D7632071B59A003B187D /* font */,
 				6758555720709D0800072CC5 /* AppDelegate.swift */,
 				67345D332071CFF200243A03 /* StartViewController.swift */,
@@ -94,6 +97,14 @@
 				6758556320709D0800072CC5 /* Info.plist */,
 			);
 			path = HanguelCalculator;
+			sourceTree = "<group>";
+		};
+		67FE98D620C3E318003B99A4 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				67FE98D720C3E32D003B99A4 /* baseline_delete_sweep_black_18dp.png */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				6755D7622071B591003B187D /* Binggrae.ttf in Resources */,
 				6758555D20709D0800072CC5 /* Main.storyboard in Resources */,
 				6755D7612071B591003B187D /* GodoM.ttf in Resources */,
+				67FE98D820C3E32D003B99A4 /* baseline_delete_sweep_black_18dp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

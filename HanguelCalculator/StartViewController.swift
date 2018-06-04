@@ -25,9 +25,9 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(start)))
-        makeGradientLabel()
+      //  makeGradientLabel()
     }
-
+/*
     func makeGradientLabel() {
         let title = UILabel(frame: UIScreen.main.bounds)
         title.text = "시작하기"
@@ -60,13 +60,13 @@ class StartViewController: UIViewController {
         gradientLayer.add(gradientAnimation, forKey: "colorChange")
     }
 
-    
+    */
     @objc func start(_ sender: Any) {
         self.performSegue(withIdentifier: "go_game", sender: nil)
     }
-    
+  
 }
-
+/*
 extension StartViewController: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if flag {
@@ -75,3 +75,4 @@ extension StartViewController: CAAnimationDelegate {
         }
     }
 }
+*/

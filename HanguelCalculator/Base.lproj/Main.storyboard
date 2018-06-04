@@ -122,7 +122,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-Hk-QjQ">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-Hk-QjQ">
                                 <rect key="frame" x="3" y="622" width="369" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-ZT-9jE">
@@ -219,6 +219,26 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="T4H-yW-yBl" firstAttribute="leading" secondItem="WEE-w4-KEP" secondAttribute="trailing" priority="300" constant="5" id="3YJ-oL-eMB"/>
+                                    <constraint firstItem="Kug-if-f6G" firstAttribute="leading" secondItem="R0p-tk-EUV" secondAttribute="trailing" priority="300" constant="5" id="6yX-Rl-PIy"/>
+                                    <constraint firstItem="awD-0W-8M3" firstAttribute="leading" secondItem="LGK-hv-qfO" secondAttribute="trailing" priority="300" constant="5" id="A1F-wO-xVy"/>
+                                    <constraint firstItem="T4H-yW-yBl" firstAttribute="centerY" secondItem="WEE-w4-KEP" secondAttribute="centerY" id="PVE-LJ-MnP"/>
+                                    <constraint firstItem="ZU7-IB-Ysp" firstAttribute="centerY" secondItem="EZq-PF-0pP" secondAttribute="centerY" id="TVk-D0-MXz"/>
+                                    <constraint firstItem="LGK-hv-qfO" firstAttribute="centerY" secondItem="RdM-hx-X98" secondAttribute="centerY" id="YPT-3S-cCJ"/>
+                                    <constraint firstItem="ZU7-IB-Ysp" firstAttribute="leading" secondItem="EZq-PF-0pP" secondAttribute="trailing" priority="300" constant="5" id="ZDf-zc-ZZB"/>
+                                    <constraint firstItem="LGK-hv-qfO" firstAttribute="leading" secondItem="RdM-hx-X98" secondAttribute="trailing" priority="300" constant="5" id="ZvW-x3-cf2"/>
+                                    <constraint firstItem="WEE-w4-KEP" firstAttribute="leading" secondItem="zee-ZT-9jE" secondAttribute="trailing" priority="300" constant="5" id="aNF-Gt-6wv"/>
+                                    <constraint firstItem="EZq-PF-0pP" firstAttribute="centerY" secondItem="T4H-yW-yBl" secondAttribute="centerY" id="aSl-nl-ikD"/>
+                                    <constraint firstItem="Kug-if-f6G" firstAttribute="centerY" secondItem="R0p-tk-EUV" secondAttribute="centerY" id="bAZ-ph-caK"/>
+                                    <constraint firstItem="awD-0W-8M3" firstAttribute="centerY" secondItem="LGK-hv-qfO" secondAttribute="centerY" id="bvH-TW-qjD"/>
+                                    <constraint firstItem="RdM-hx-X98" firstAttribute="centerY" secondItem="Kug-if-f6G" secondAttribute="centerY" id="dfI-5d-W8T"/>
+                                    <constraint firstItem="R0p-tk-EUV" firstAttribute="leading" secondItem="ZU7-IB-Ysp" secondAttribute="trailing" priority="300" constant="5" id="eMb-aA-hc9"/>
+                                    <constraint firstItem="RdM-hx-X98" firstAttribute="leading" secondItem="Kug-if-f6G" secondAttribute="trailing" priority="300" constant="5" id="n3I-ZK-fU4"/>
+                                    <constraint firstItem="EZq-PF-0pP" firstAttribute="leading" secondItem="T4H-yW-yBl" secondAttribute="trailing" priority="300" constant="5" id="nDF-fA-2Bd"/>
+                                    <constraint firstItem="R0p-tk-EUV" firstAttribute="centerY" secondItem="ZU7-IB-Ysp" secondAttribute="centerY" id="tdd-JH-0qk"/>
+                                    <constraint firstItem="WEE-w4-KEP" firstAttribute="centerY" secondItem="zee-ZT-9jE" secondAttribute="centerY" id="w1q-JZ-GKm"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOF-sS-LCP">
                                 <rect key="frame" x="283" y="577.5" width="30" height="28"/>
@@ -242,6 +262,7 @@
                             <constraint firstItem="gFt-Fn-DEB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NWn-aF-uMS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w4T-Hk-QjQ" secondAttribute="trailing" constant="3" id="Rf8-YT-Kr5"/>
                             <constraint firstItem="EOF-sS-LCP" firstAttribute="leading" secondItem="yLM-Fs-Sev" secondAttribute="trailing" constant="10" id="Sdl-G6-qRU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="awD-0W-8M3" secondAttribute="trailing" constant="3" id="UST-tj-uby"/>
                             <constraint firstItem="RbM-hw-2IP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W9N-hC-0X1"/>
                             <constraint firstItem="RbM-hw-2IP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gR0-My-mwJ"/>
                             <constraint firstItem="yLM-Fs-Sev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="h6S-gN-fdv"/>
@@ -253,6 +274,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vng-y8-Gnh" secondAttribute="trailing" constant="14" id="rRY-sf-svu"/>
                             <constraint firstItem="w4T-Hk-QjQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="s6I-CS-U8W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wu3-3s-c1R" secondAttribute="trailing" constant="16" id="xOV-71-eBH"/>
+                            <constraint firstItem="zee-ZT-9jE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="zQM-m1-fvP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

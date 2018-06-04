@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         self.restartButton.isHidden = true
         self.answer.text = ""
         self.setTimer()
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                     target: self,
+                                     selector: #selector(setRemainTime),
+                                     userInfo: nil,
+                                     repeats: true)
+
     }
     
     func gameEnd() {
@@ -60,12 +66,6 @@ class ViewController: UIViewController {
         remainedTime.text = "10"
         remainedTime.textColor = UIColor.black
         cnt = 10
-        
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
-                                     target: self,
-                                     selector: #selector(setRemainTime),
-                                     userInfo: nil,
-                                     repeats: true)
     }
     
     @objc func setRemainTime() {
@@ -132,20 +132,27 @@ class ViewController: UIViewController {
         self.deleteButton.isHidden = false
         self.numberButtons.isHidden = false
         
-        setTimer()
+        
         self.answer.textColor = .black
         self.answer.text = ""
         self.solvedProblem.transform = .identity
         solved = 0
         solvedProblem.text = "정답수 : 0"
+        setTimer()
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(1),
+                                     target: self,
+                                     selector: #selector(setRemainTime),
+                                     userInfo: nil,
+                                     repeats: true)
+
     }
     @IBAction func summitAnswer(_ sender: Any) {
         if checkAnswer(Answer: answer.text!) {
-            setTimer()
             answer.textColor = UIColor.black
             answer.text = ""
             solved += 1
             solvedProblem.text = "정답수 : \(solved)"
+            setTimer()
         }
         else {
             answer.shake()
